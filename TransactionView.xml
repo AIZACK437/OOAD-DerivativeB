@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="bankingsystem.gui.TransactionController"
+      alignment="CENTER" spacing="10" prefWidth="400" style="-fx-background-color:#f9f9f9;">
+    <padding><Insets top="20" bottom="20" left="20" right="20"/></padding>
+
+    <Label text="Deposit / Withdraw Funds" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="txtAccountNumber" promptText="Account Number" prefWidth="250"/>
+    <TextField fx:id="txtAmount" promptText="Amount (BWP)" prefWidth="250"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Deposit" onAction="#onDepositClicked"/>
+        <Button text="Withdraw" onAction="#onWithdrawClicked"/>
+    </HBox>
+
+    <Button text="Back to Menu" onAction="#onBackClicked"/>
+
+    <Label fx:id="lblMessage" textFill="green"/>
+</VBox>
