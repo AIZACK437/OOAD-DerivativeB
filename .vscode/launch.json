@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "BankingApp",
+            "request": "launch",
+            "mainClass": "bankingsystem.BankingApp",
+            "projectName": "OOAD-DerivativeB_a6914093"
+        },
+        {
+            "type": "java",
+            "name": "Launch BankingApp",
+            "request": "launch",
+            "mainClass": "bankingsystem.BankingApp",
+            "vmArgs": "--module-path /home/codespace/javafx/javafx-sdk-21.0.4/lib --add-modules javafx.controls,javafx.fxml",
+            "projectName": "OOAD-BANKING"
+        }
+    ]
+}
