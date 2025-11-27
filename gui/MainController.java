@@ -19,12 +19,13 @@ public class MainController {
     @FXML
     void onOpenAccountClicked(ActionEvent event) {
         System.out.println("Open Account clicked");
-        switchScene(event, "OpenAccountView.fxml"); // or whatever FXML you need
+        switchScene(event, "OpenAccountView.fxml");
     }
 
     @FXML
     void onApplyInterestClicked(ActionEvent event) {
         System.out.println("Apply Interest clicked");
+        // Consider calling Bank.getInstance().applyInterestToAllAccounts() here
     }
 
     @FXML
@@ -44,7 +45,8 @@ public class MainController {
 
     private void switchScene(ActionEvent event, String fxml) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
+            // use absolute resource path to avoid classpath-relative inconsistencies
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/bankingsystem/gui/" + fxml));
             Parent root = loader.load();
 
             Scene scene = new Scene(root, 600, 400);
